@@ -1,0 +1,93 @@
+.form-control{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        width: 100%;
+        height: 10%;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form{
+        position: relative;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+
+            label{
+                position: absolute;
+                left: 28%;
+                padding: 0 1%;
+                font-size: 1.15rem;
+                transition: all .4s ease-in-out;
+                pointer-events: none;
+
+                @media (max-width: 425px) {
+                    left: 33%;
+                    font-size: 0.75rem;
+                }
+            }
+
+            input{
+                width: 50%;
+                height: 3rem;
+                border: 0;
+                background: transparent;
+                font-size: 1.25rem;
+                padding: 0 1%;
+                border-bottom: 1px solid;
+                outline: none;
+
+                &:focus + label,
+                &:not(:placeholder-shown) + label{
+                    transform: translate(-5%, -170%);
+                    font-size: 1rem;
+                    transition: all .4s ease-in-out;
+                    color: #2e66ba;
+                    font-weight: 550;
+                    @media (max-width: 425px) {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+
+        }
+
+        .submit-btn{
+            width: min(10rem, 40%);
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            
+            button{
+                width: 100%;
+                border-radius: .5rem;
+                border: 0;
+                cursor: pointer;
+                background-color: #8EACCD;
+                text-transform: uppercase;
+                font-weight: 550;
+            }
+        }
+    }
+}
